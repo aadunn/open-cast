@@ -37,6 +37,9 @@ export default class App extends React.Component {
                                     key={ i }
                                     title={ item.title }
                                     leftIcon={{ name: item.icon }}
+                                    onPress={ () => {
+                                        alert('i\'ve been tapped')
+                                    }}
                                 />
                             ))
                         }
