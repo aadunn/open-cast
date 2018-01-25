@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Alert } from 'react-native';
 import { Header, List, ListItem } from 'react-native-elements';
 
 const styles = StyleSheet.create({
@@ -20,19 +20,20 @@ export default class App extends React.Component {
         icon: 'photo-library',
       },
     ];
+
     return (
       <View style={styles.main}>
         <Header
           leftComponent={{
             icon: 'menu',
             color: '#fff',
-            onPress: () => alert('menu'),
+            onPress: () => Alert.alert('menu'),
           }}
           centerComponent={{ text: 'OpenCast', style: { color: '#fff' } }}
           rightComponent={{
             icon: 'cast',
             color: '#fff',
-            onPress: () => alert('casting'),
+            onPress: () => Alert.alert('casting'),
           }}
         />
         <View>
@@ -44,7 +45,7 @@ export default class App extends React.Component {
                   title={item.title}
                   leftIcon={{ name: item.icon }}
                   onPress={() => {
-                    alert('i\'ve been tapped');
+                    Alert.alert('i\'ve been tapped');
                   }}
                 />
               ))
